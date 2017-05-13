@@ -1,7 +1,6 @@
 package xubin;
 
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -19,18 +18,17 @@ public class BeanSelfLifeCycleTest {
     @Resource
     private BeanSelfLifeCycle beanSelfLifeCycle;
 
-    @Autowired (required = false)
+    @Resource
     private BeanLevelLifeCycle beanLevelLifeCycle;
 
-    @Autowired (required = false)
+    @Resource
     private BeanContainerLifeCyclePost beanContainerLifeCycle;
 
-    @Autowired (required = false)
+    @Resource
     private BeanContainerLifeCycleFactory beanContainerLifeCycleFactory;
 
     @org.junit.Test
     public void Test(){
-//        beanSelfLifeCycle.setName("syc");
         System.out.println("===============");
     }
 }
